@@ -12,3 +12,6 @@ def about(reguest):
 
 def mda(reguest):
     return render(reguest, 'main/mda.html')
+
+def mda2(reguest):
+    return render(reguest, 'main/mda2.html')

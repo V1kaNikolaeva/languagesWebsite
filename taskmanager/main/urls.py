@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.index),
     path('about-us', views.about),
     path('mda', views.mda),
+    path('mda2', views.mda),
 ]
