@@ -10,8 +10,5 @@ def index(reguest):
 def about(reguest):
     return render(reguest, 'main/about.html')
 
-def mda(reguest):
-    return render(reguest, 'main/mda.html')
 
-def mda2(reguest):
-    return render(reguest, 'main/mda2.html')
+
