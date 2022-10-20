@@ -16,5 +16,8 @@ def singin(reguest):
 def lookch(reguest):
     return render(reguest, 'main/lookch.html')
 
+def looken(reguest):
+    return render(reguest, 'main/looken.html')
+
 
 
