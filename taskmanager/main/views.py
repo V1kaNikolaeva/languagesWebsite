@@ -10,5 +10,11 @@ def index(reguest):
 def about(reguest):
     return render(reguest, 'main/about.html')
 
+def singin(reguest):
+    return render(reguest, 'main/singin.html')
+
+def lookch(reguest):
+    return render(reguest, 'main/lookch.html')
+
 
 
