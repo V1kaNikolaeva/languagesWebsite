@@ -14,6 +14,7 @@ def singin(reguest):
     return render(reguest, 'main/singin.html')
 
 def lookch(reguest):
+    #signs = Sign.objects.order_by('-id')
     return render(reguest, 'main/lookch.html')
 
 def looken(reguest):
