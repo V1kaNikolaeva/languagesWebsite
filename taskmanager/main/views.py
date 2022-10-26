@@ -20,5 +20,11 @@ def lookch(reguest):
 def looken(reguest):
     return render(reguest, 'main/looken.html')
 
+def cardsen(reguest):
+    return render(reguest, 'main/cardsen.html')
+
+def cardsch(reguest):
+    return render(reguest, 'main/cardsch.html')
+
 
 

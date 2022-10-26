@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Иностранные глаголы
+{% endblock %}
+
+{% block content %}
+<div align="left">
+    <div class="card mb-3 text-center" style="width: 15rem;">
+        <ul>
+            <div>
+                <a class="p-4 text-black" href="/cards-en">Английский язык</a>
+            </div>
+            <div>
+                <u>
+                    <a class="p-4 text-black" href="/cards-ch">Китайский язык</a>
+                </u>
+            </div>
+        </ul>
+    </div>
+</div>
+<div align="center">
+    <div class="col-md-4" style="width: 30rem;">
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <p class="card-text">100 самых распростроненных глаголов китайского языка</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div align="center">
+                        <a href="/look-ch">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
+                        </a>
+                        <a href="#">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Добавить все</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
