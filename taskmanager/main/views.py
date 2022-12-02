@@ -20,17 +20,13 @@ def lookch(reguest):
 def looken(reguest):
     return render(reguest, 'main/looken.html')
 
-def lookfr(reguest):
-    return render(reguest, 'main/lookfr.html')
-
 def cardsen(reguest):
     return render(reguest, 'main/cardsen.html')
 
 def cardsch(reguest):
     return render(reguest, 'main/cardsch.html')
 
-def cardsfr(reguest):
-    return render(reguest, 'main/cardsfr.html')
+
 
 
 
