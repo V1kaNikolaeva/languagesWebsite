@@ -1,0 +1,176 @@
+body {
+    background: rgb(22, 22, 22);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 0;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: white;
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(../images/back.jpg); */
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1400;
+    background-color: rgb(37, 43, 48);
+    padding-top: 20px; /* Отступ сверху!!! */
+}
+
+.contanier {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header__inner {
+    display: flex; /* объеденяем div'ы внутри header__inner (flex box) */
+    justify-content: space-between; /* делаем расстояние между name и nav */
+    align-items: center; /* Выравнивание текста по центру!!! */
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin-left: 30px;
+}
+
+.nav {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    display: inline-block; /* навигация становится не просто словами, а блоком */
+    margin:0 30px; /* отступ, расстояние между навигацией */
+    color: white;
+    text-decoration: none; /* убираем подчеркивание у ссылок */
+    transition: color .2s linear; /* плавная смена цвета у ссылки */
+
+}
+
+.nav__link:hover {
+    color: rgb(191, 127, 8);
+
+}
+
+.pick {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* делаем флекс как бы по вертикали */
+    text-align: center;
+}
+
+.choose {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.language {
+    display: inline-block;
+    margin: 0;
+    text-decoration: none;
+    height: 110px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    padding-top: 90px;
+
+}
+
+
+
+.first {
+    outline: 1px;
+    outline-style: solid;
+    outline-color: rgb(255, 255, 255);
+    height: 200px;
+    border-radius: 10px;
+    margin: 0 50px;
+    width: 200px;
+    margin-left: 0px;
+    background-color: rgb(37, 43, 48);
+}
+.first:hover {
+    box-shadow: 0 0 15px 10px rgb(255, 255, 255);
+    transition: box-shadow .2s linear;
+}
+
+.second {
+    outline: 1px;
+    outline-style: solid;
+    outline-color: rgb(255, 255, 255);
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgb(37, 43, 48);
+}
+.second:hover {
+    box-shadow: 0 0 15px 10px rgb(255, 255, 255);
+    transition: box-shadow .2s linear;
+}
+
+.chFaq {
+    background-color: rgb(22, 22, 22);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    margin-right: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+
+}
+
+.chFaq:hover {
+    outline: 1px;
+    outline-color: #fff;
+    outline-style: solid;
+    transition: outline .2s linear;
+}
+
+.enFaq {
+    background-color: rgb(22, 22, 22);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    margin-left: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+.enFaq:hover {
+    outline: 1px;
+    outline-color: #fff;
+    outline-style: solid;
+    transition: outline .2s linear;
+}
+
+#description {
+    margin: 0;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 320px;
+    margin-right: 320px;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
