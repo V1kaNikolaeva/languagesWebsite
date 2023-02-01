@@ -135,6 +135,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 50px;
     width: 50px;
     border-radius: 10px;
+    cursor: pointer;
+
 
 }
 
@@ -143,6 +145,7 @@ h1, h2, h3, h4, h5, h6 {
     outline-color: #fff;
     outline-style: solid;
     transition: outline .2s linear;
+
 }
 
 .enFaq {
@@ -154,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 50px;
     width: 50px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .enFaq:hover {
