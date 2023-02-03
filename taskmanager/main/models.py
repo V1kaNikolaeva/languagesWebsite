@@ -8,3 +8,10 @@ class Card(models.Model):
 
     def __str__(self):
         return self.word
+#
+# class enCard(models.Model):
+#     word = models.CharField('Слово', max_length=20)
+#     description = models.TextField('Перевод')
+#
+#     def __str__(self):
+#         return self.word

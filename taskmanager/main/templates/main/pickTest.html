@@ -8,7 +8,7 @@
     {% load static %}
 
 
-    <link rel="stylesheet" href="{% static 'main/css/chCards.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/pickTest.css' %}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,27 +39,23 @@
     </div>
 </header>
 
+<div class="intro">
+    <div class="contanier">
+        <div class="pick">
+            <h2>По какому языку хотите пройти тест?</h2>
+            <div class="choose">
+                <div class="first">
+                    <a class="language" href="/chTest">Китайский язык</a>
+                </div>
 
-<div class="wrapper">
-
-    <div class="title">
-        <h4 class="myWords">МОИ СЛОВА</h4>
-        <div class="createNewCard">
-            <a class="createNewCardLink" href="#"><h4 class="textCreate">Добавить слово</h4></a>
+                <div class="second">
+                    <a class="language" href="/enTest">Английский язык</a>
+                </div>
+            </div>
         </div>
     </div>
-
-    {% for el in cards %}
-    <div class="card">
-        <p class="word">
-            {{ el.word }}
-        </p>
-        <p class="description">
-            {{ el.description }}
-        </p>
-    </div>
-    {% endfor %}
 </div>
 
-
+<script src=""></script>
 </body>
+</html>
