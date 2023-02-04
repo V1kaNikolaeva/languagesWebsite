@@ -144,3 +144,20 @@ h1, h2, h3, h4, h5, h6 {
     outline-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
+
+.noCards {
+    display: block;
+    margin: auto;
+    color: white;
+    text-align: center;
+    background-color: rgb(37, 43, 48);
+    border-radius: 10px;
+    width: 1200px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.noCardsText {
+    padding-top: 25px;
+}

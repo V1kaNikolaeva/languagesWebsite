@@ -43,22 +43,27 @@
 <div class="wrapper">
 
     <div class="title">
-        <h4 class="myWords">МОИ СЛОВА</h4>
+        <h4 class="myWords">МОИ СПИСОК</h4>
         <div class="createNewCard">
-            <a class="createNewCardLink" href="#"><h4 class="textCreate">Добавить слово</h4></a>
+            <a class="createNewCardLink" href="#"><h4 class="textCreate">Добавить слово (ch)</h4></a>
         </div>
     </div>
-
-    {% for el in cards %}
-    <div class="card">
-        <p class="word">
-            {{ el.word }}
-        </p>
-        <p class="description">
-            {{ el.description }}
-        </p>
-    </div>
-    {% endfor %}
+    {% if cards %}
+        {% for el in cards %}
+        <div class="card">
+            <p class="word">
+                {{ el.word }}
+            </p>
+            <p class="description">
+                {{ el.description }}
+            </p>
+        </div>
+        {% endfor %}
+        {% else %}
+            <div class="noCards">
+                <p class="noCardsText">Тут пусто</p>
+            </div>
+        {% endif %}
 </div>
 
 

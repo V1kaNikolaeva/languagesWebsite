@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Card(models.Model):
@@ -8,10 +9,14 @@ class Card(models.Model):
 
     def __str__(self):
         return self.word
-#
-# class enCard(models.Model):
-#     word = models.CharField('Слово', max_length=20)
-#     description = models.TextField('Перевод')
-#
-#     def __str__(self):
-#         return self.word
+
+
+class enCard(models.Model):
+    word = models.CharField('Слово', max_length=20)
+    description = models.TextField('Перевод')
+
+    def __str__(self):
+        return self.word
+
+
+

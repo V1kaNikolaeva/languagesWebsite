@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Card
+from .models import Card, enCard
 # Create your views here.
 from django.http import HttpResponse
 
@@ -22,8 +22,8 @@ def chCards(reguest):
     return render(reguest, 'main/chCards.html', {'cards': cards})
 
 def enCards(reguest):
-    cards = Card.objects.all()
-    return render(reguest, 'main/enCards.html', {'cards': cards})
+    enCards = enCard.objects.all()
+    return render(reguest, 'main/enCards.html', {'enCards': enCards})
 
 
 
