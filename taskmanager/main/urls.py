@@ -8,5 +8,6 @@ urlpatterns = [
     path('chTest', views.chTest),
     path('enTest', views.enTest),
     path('enCards', views.enCards),
-
+    path('createChCard', views.createChCard),
+    path('createEnCard', views.createEnCard),
 ]

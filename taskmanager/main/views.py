@@ -21,11 +21,15 @@ def chCards(reguest):
     cards = Card.objects.all()
     return render(reguest, 'main/chCards.html', {'cards': cards})
 
+def createChCard(reguest):
+    return render(reguest, 'main/createChCard.html')
+
 def enCards(reguest):
     enCards = enCard.objects.all()
     return render(reguest, 'main/enCards.html', {'enCards': enCards})
 
-
+def createEnCard(reguest):
+    return render(reguest, 'main/createEnCard.html')
 
 
 
