@@ -38,9 +38,10 @@
 
 
 <div class="formWrapper">
-    <form action="" class="form">
-        <input type="text" placeholder="Введите слово" class="inputWord" id="inForm"><br>
-        <textarea class="inputTrns" placeholder="Введите перевод" id="inForm"></textarea><br>
+    <form method="post" class="form">
+        {% csrf_token %}
+        {{ form.word }}<br>
+        {{ form.description }}<br>
         <button type="submit" class="accept" id="inForm">Добавить</button>
     </form>
 </div>

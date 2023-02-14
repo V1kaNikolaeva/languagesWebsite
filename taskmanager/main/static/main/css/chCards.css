@@ -67,10 +67,17 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+
 .wrapper {
     margin: auto;
     margin-top: 160px;
 
+}
+
+.cardWrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
 }
 
 .title {
@@ -90,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card {
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 10px;
     width: 1200px;
     color: white;
@@ -105,14 +112,18 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
     font-weight: 400;
     margin-left: 15px;
-    padding-top: 5px;
+    margin-right: 10px;
+    margin-top: 15px;
 }
 
 .description {
     margin: auto;
     font-size: 20px;
     font-weight: 300;
-    margin-left: 15px;
+    margin-left: 5px;
+    margin-top: 23px;
+    margin-bottom: 5px;
+    margin-right: 980px;
 }
 
 .createNewCard {
@@ -160,4 +171,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .noCardsText {
     padding-top: 25px;
+}
+
+.deleteWord {
+    display: block;
+    text-decoration: none;
+    text-align: right;
+    justify-content: center;
+    margin-left: 1px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.deleteWordBtn {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(37, 43, 48);
+    border: none;
+    background-image: url(static/main/images/free-icon-rubbish-bin-1483063.png);
 }

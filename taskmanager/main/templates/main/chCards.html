@@ -49,21 +49,26 @@
         </div>
     </div>
     {% if cards %}
-        {% for el in cards %}
-        <div class="card">
+    {% for el in cards %}
+    <div class="card">
+         <div class="cardWrapper">
             <p class="word">
                 {{ el.word }}
             </p>
             <p class="description">
                 {{ el.description }}
             </p>
-        </div>
-        {% endfor %}
-        {% else %}
-            <div class="noCards">
-                <p class="noCardsText">Тут пусто</p>
+            <div class="deleteWord">
+                <button class="deleteWordBtn" ></button>
             </div>
-        {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="noCards">
+        <p class="noCardsText">Тут пусто</p>
+    </div>
+    {% endif %}
 </div>
 
 

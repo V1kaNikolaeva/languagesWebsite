@@ -5,7 +5,7 @@ from django.db import models
 
 class Card(models.Model):
     word = models.CharField('Слово', max_length=20)
-    description = models.TextField('Перевод')
+    description = models.TextField('Перевод', max_length=70)
 
     def __str__(self):
         return self.word
@@ -13,10 +13,7 @@ class Card(models.Model):
 
 class enCard(models.Model):
     word = models.CharField('Слово', max_length=20)
-    description = models.TextField('Перевод')
+    description = models.TextField('Перевод', max_length=70)
 
     def __str__(self):
         return self.word
-
-
-

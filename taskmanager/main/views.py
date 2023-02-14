@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Card, enCard
-# Create your views here.
-from django.http import HttpResponse
+from .forms import CardForm, enCardForm
 
 
 def index(reguest):
@@ -18,18 +17,38 @@ def enTest(reguest):
     return render(reguest, 'main/enTest.html')
 
 def chCards(reguest):
-    cards = Card.objects.all()
+    cards = Card.objects.order_by('-id')
     return render(reguest, 'main/chCards.html', {'cards': cards})
 
 def createChCard(reguest):
-    return render(reguest, 'main/createChCard.html')
+    if reguest.method == 'POST':
+        form = CardForm(reguest.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/chCards')
+
+    form = CardForm()
+    context = {
+        'form': form,
+    }
+    return render(reguest, 'main/createChCard.html', context)
 
 def enCards(reguest):
     enCards = enCard.objects.all()
     return render(reguest, 'main/enCards.html', {'enCards': enCards})
 
 def createEnCard(reguest):
-    return render(reguest, 'main/createEnCard.html')
+    if reguest.method == 'POST':
+        form = enCardForm(reguest.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/enCards')
+
+    form = enCardForm()
+    context = {
+        'form': form,
+    }
+    return render(reguest, 'main/createEnCard.html', context)
 
 
 
