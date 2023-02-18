@@ -8,7 +8,7 @@
     {% load static %}
 
 
-    <link rel="stylesheet" href="{% static 'main/css/enCards.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/cards.css' %}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,26 +44,41 @@
 
     <div class="title">
         <h4 class="myWords">МОИ СПИСОК</h4>
+        <div class="wordBtn">
+            <button class="wordBtnFirst">
+                <h4 class="hideWord">Скрыть слова</h4>
+            </button>
+        </div>
+        <div class="descriptionBtn">
+            <button class="descriptionBtnSecond">
+                <h4 class="hideDescription">Скрыть перевод</h4>
+            </button>
+        </div>
         <div class="createNewCard">
-            <a class="createNewCardLink" href="/createEnCard"><h4 class="textCreate">Добавить слово (en)</h4></a>
+            <a class="createNewCardLink" href="/createChCard"><h4 class="textCreate">Добавить слово (ch)</h4></a>
         </div>
     </div>
     {% if enCards %}
-        {% for el in enCards %}
-        <div class="card">
+    {% for el in enCards %}
+    <div class="card">
+        <div class="cardWrapper">
             <p class="word">
                 {{ el.word }}
             </p>
             <p class="description">
                 {{ el.description }}
             </p>
-        </div>
-        {% endfor %}
-        {% else %}
-            <div class="noCards">
-                <p class="noCardsText">Тут пусто</p>
+            <div class="deleteWord">
+                <button class="deleteWordBtn">Удалить</button>
             </div>
-        {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="noCards">
+        <p class="noCardsText">Тут пусто</p>
+    </div>
+    {% endif %}
 </div>
 
 

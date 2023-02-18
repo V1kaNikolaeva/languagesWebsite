@@ -1,15 +1,9 @@
-html {
-    /* overflow-y: hidden; */
-    scrollbar-face-color: black;
-  }
-
 body {
     background: rgb(22, 22, 22);
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     margin: 0;
-    scrollbar-face-color: black;
-    
+    overflow-y: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
