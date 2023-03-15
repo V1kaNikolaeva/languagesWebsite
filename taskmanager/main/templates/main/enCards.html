@@ -45,31 +45,33 @@
     <div class="title">
         <h4 class="myWords">МОИ СПИСОК</h4>
         <div class="wordBtn">
-            <button class="wordBtnFirst">
+            <button class="wordBtnFirst" id="wordBtnFirst">
                 <h4 class="hideWord">Скрыть слова</h4>
             </button>
         </div>
         <div class="descriptionBtn">
-            <button class="descriptionBtnSecond">
+            <button class="descriptionBtnSecond" id="descriptionBtnSecond">
                 <h4 class="hideDescription">Скрыть перевод</h4>
             </button>
         </div>
         <div class="createNewCard">
-            <a class="createNewCardLink" href="/createChCard"><h4 class="textCreate">Добавить слово (ch)</h4></a>
+            <a class="createNewCardLink" href="/createEnCard"><h4 class="textCreate">Добавить слово (ch)</h4></a>
         </div>
     </div>
     {% if enCards %}
     {% for el in enCards %}
     <div class="card">
         <div class="cardWrapper">
-            <p class="word">
-                {{ el.word }}
-            </p>
-            <p class="description">
-                {{ el.description }}
-            </p>
+            <div class="cardWrapperAll">
+                <p class="word" id="word">
+                    {{ el.word }}
+                </p>
+                <p class="description" id="description">
+                    {{ el.description }}
+                </p>
+            </div>
             <div class="deleteWord">
-                <button class="deleteWordBtn">Удалить</button>
+                <button class="deleteWordBtn">Изменить</button>
             </div>
         </div>
     </div>
@@ -81,5 +83,5 @@
     {% endif %}
 </div>
 
-
+<script src="{% static 'main/js/cardsShowHide.js' %}"></script>
 </body>
