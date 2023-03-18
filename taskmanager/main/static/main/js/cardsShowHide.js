@@ -9,14 +9,18 @@ hideTrsBtn.onclick = hideTrs;
 
 function hideWord() {
     word.forEach(x => x.classList.toggle('hidden'))
-    if(word.classList = 'hidden') {
-        hideWordBtn.innerText = 'Показать слова'
-    } else if(word.classList = 'word') {
-        hideWordBtn.innerText = 'Скрыть слова'
+    if(hideWordBtn.innerText == 'Показать слова') {
+        hideWordBtn.innerText = 'Скрыть слова';
+    } else if(hideWordBtn.innerText == 'Скрыть слова') {
+        hideWordBtn.innerText = 'Показать слова';
     }
 }
 
 function hideTrs() {
-    console.log('lol')
     trs.forEach(x => x.classList.toggle('hidden'))
+    if(hideTrsBtn.innerText == 'Показать перевод') {
+        hideTrsBtn.innerText = 'Скрыть перевод';
+    } else if(hideTrsBtn.innerText == 'Скрыть перевод') {
+        hideTrsBtn.innerText = 'Показать перевод';
+    }
 }
