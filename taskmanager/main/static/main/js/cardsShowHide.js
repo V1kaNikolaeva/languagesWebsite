@@ -4,6 +4,7 @@ const trs = document.querySelectorAll('.description');
 const hideWordBtn = document.querySelector('.wordBtnFirst');
 const hideTrsBtn = document.querySelector('.descriptionBtnSecond');
 
+
 hideWordBtn.onclick = hideWord;
 hideTrsBtn.onclick = hideTrs;
 
