@@ -59,12 +59,10 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     text-decoration: none; /* убираем подчеркивание у ссылок */
     transition: color .2s linear; /* плавная смена цвета у ссылки */
-
 }
 
 .nav__link:hover {
     color: rgb(191, 127, 8);
-
 }
 
 .pick {
@@ -91,10 +89,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 200px;
     color: rgb(255, 255, 255);
     padding-top: 90px;
-
 }
-
-
 
 .first {
     outline: 1px;
@@ -107,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0px;
     background-color: rgb(37, 43, 48);
 }
+
 .first:hover {
     box-shadow: 0 0 15px 10px rgb(255, 255, 255);
     transition: box-shadow .2s linear;
@@ -121,6 +117,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
     background-color: rgb(37, 43, 48);
 }
+
 .second:hover {
     box-shadow: 0 0 15px 10px rgb(255, 255, 255);
     transition: box-shadow .2s linear;
@@ -136,8 +133,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 50px;
     border-radius: 10px;
     cursor: pointer;
-
-
 }
 
 .chFaq:hover {
@@ -145,7 +140,6 @@ h1, h2, h3, h4, h5, h6 {
     outline-color: #fff;
     outline-style: solid;
     transition: outline .2s linear;
-
 }
 
 .enFaq {
@@ -170,6 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 .hidden {
     display: none;
 }
+
 .description {
     display: block;
     margin: 0;
@@ -180,6 +175,5 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
-
 }
 
