@@ -1,47 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    {% load static %}
+{% extends 'main/base.html' %}
 
+{% block title %}
+Карточки английского
+{% endblock %}
 
-    <link rel="stylesheet" href="{% static 'main/css/cards.css' %}">
+{% block link %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/cards.css' %}">
+{% endblock %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script>
-
-    </script>
-</head>
-
-
-<body>
-
-
-<header class="header">
-    <div class="contanier">
-        <div class="header__inner">
-            <div class="name">Languages</div>
-
-            <nav class="nav">
-                <a class="nav__link" href="/">Главная</a>
-                <a class="nav__link" href="#">Аккаунт</a>
-                <a class="nav__link" href="/pickTest">Тесты</a>
-                <a class="nav__link" href="#">Войти</a>
-                <a class="nav__link" href="#">Регистрация</a>
-            </nav>
-        </div>
-    </div>
-    </div>
-</header>
-
-
+{% block content %}
 <div class="wrapper">
-
     <div class="title">
         <h4 class="myWords">МОИ СПИСОК</h4>
         <div class="wordBtn">
@@ -82,6 +51,17 @@
     </div>
     {% endif %}
 </div>
-
 <script src="{% static 'main/js/cardsShowHide.js' %}"></script>
-</body>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
