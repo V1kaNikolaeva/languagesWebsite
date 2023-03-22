@@ -3,26 +3,30 @@ from .models import Card, enCard
 from .forms import CardForm, enCardForm
 
 
-def index(reguest):
+def index(request):
 
-    return render(reguest, 'main/index.html')
+    return render(request, 'main/index.html')
 
-def pickTest(reguest):
-    return render(reguest, 'main/pickTest.html')
+def pickTest(request):
+    return render(request, 'main/pickTest.html')
 
-def chTest(reguest):
-    return render(reguest, 'main/chTest.html')
+def chTest(request):
+    return render(request, 'main/chTest.html')
 
-def enTest(reguest):
-    return render(reguest, 'main/enTest.html')
+def enTest(request):
+    return render(request, 'main/enTest.html')
 
-def chCards(reguest):
+def chCards(request):
     cards = Card.objects.order_by('-id')
-    return render(reguest, 'main/chCards.html', {'cards': cards})
+    return render(request, 'main/chCards.html', {'cards': cards})
 
-def createChCard(reguest):
-    if reguest.method == 'POST':
-        form = CardForm(reguest.POST)
+def detailChPage(request, id):
+    getChCard = Card.objects.get(id=id)
+    return render(request, 'main/chDetail.html', {'getChCard': getChCard})
+
+def createChCard(request):
+    if request.method == 'POST':
+        form = CardForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/chCards')
@@ -31,15 +35,15 @@ def createChCard(reguest):
     context = {
         'form': form,
     }
-    return render(reguest, 'main/createChCard.html', context)
+    return render(request, 'main/createChCard.html', context)
 
-def enCards(reguest):
+def enCards(request):
     enCards = enCard.objects.all()
-    return render(reguest, 'main/enCards.html', {'enCards': enCards})
+    return render(request, 'main/enCards.html', {'enCards': enCards})
 
-def createEnCard(reguest):
-    if reguest.method == 'POST':
-        form = enCardForm(reguest.POST)
+def createEnCard(request):
+    if request.method == 'POST':
+        form = enCardForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/enCards')
@@ -48,9 +52,10 @@ def createEnCard(reguest):
     context = {
         'form': form,
     }
-    return render(reguest, 'main/createEnCard.html', context)
+    return render(request, 'main/createEnCard.html', context)
 
-
-
+# def delete_page(request, pk):
+#
+#     return redirect('/chCards')
 
 

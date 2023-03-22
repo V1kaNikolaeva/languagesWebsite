@@ -1,12 +1,11 @@
-const btn = document.querySelector('.theme__button')
-const theme = document.querySelector('.theme')
+const toggle = document.getElementById("theme-link");
+const theme = window.localStorage.getItem("theme");
 
-theme.setAttribute('data-theme', 'dark')
+if (theme === "dark") document.body.classList.add("dark");
 
-btn.addEventListener('click', () => {
-  if (theme.getAttribute('data-theme') === 'light') {
-    theme.setAttribute('data-theme', 'dark')
-  } else {
-    theme.setAttribute('data-theme', 'light')
-  }
-})
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  if (theme === "dark") {
+    window.localStorage.setItem("theme", null);
+  } else window.localStorage.setItem("theme", "dark");
+});

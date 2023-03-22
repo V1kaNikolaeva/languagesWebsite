@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.index),
     path('pickTest', views.pickTest),
     path('chCards', views.chCards),
+    path('chDetail/<int:id>', views.detailChPage, name='detailChPage'),
     path('chTest', views.chTest),
     path('enTest', views.enTest),
     path('enCards', views.enCards),
