@@ -7,9 +7,24 @@
 {% block link %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'main/css/cards.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/createCard.css' %}">
 {% endblock %}
 
 {% block content %}
+
+{% if update %}
+
+<div class="formWrapper">
+    <form method="post" class="form">
+        {% csrf_token %}
+        {{ form.word }}<br>
+        {{ form.description }}<br>
+        <button type="submit" class="accept" id="inForm">Изменить</button>
+    </form>
+</div>
+
+{% else %}
+
 <div class="wrapper">
     <div class="title">
         <h4 class="myWords">МОИ СПИСОК</h4>
@@ -39,11 +54,10 @@
                     {{ el.description }}
                 </p>
             </div>
-
             <div class="deleteWord">
-                <a class="deleteWordBtn" href="/chDetail/{{el.id}}">Изменить</a>
-                <a class="deleteWordBtn" href="/chDetail/{{el.id}}">Подробно</a>
-                <a class="deleteWordBtn" href="/chDetail/{{el.id}}">Удалить</a>
+                <a class="deleteWordBtn" id="first" href="{% url 'updateChPage' el.id %}"><p class="changeLink">Изменить</p></a>
+                <a class="deleteWordBtn" id="second" href="/chDetail/{{el.id}}"><p class="infoLink">Подробно</p></a>
+                <a class="deleteWordBtn" id="third" href="{% url 'deleteChPage' el.id %}"><p class="deleteLink">Удалить</p></a>
             </div>
         </div>
     </div>
@@ -53,6 +67,8 @@
         <p class="noCardsText">Тут пусто</p>
     </div>
     {% endif %}
+
+{% endif %}
 </div>
 <script src="{% static 'main/js/cardsShowHide.js' %}"></script>
 {% endblock %}

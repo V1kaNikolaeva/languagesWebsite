@@ -88,7 +88,7 @@
 .createNewCardLink:hover {
     outline: 1px;
     outline-style: solid;
-    outline-color: rgb(255, 255, 255);
+    outline-color: #64C650;
     border-radius: 10px;
 }
 
@@ -135,10 +135,23 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.deleteWordBtn:hover {
-    outline: 1px;
-    outline-style: solid;
-    outline-color: #97191D;
+.p {
+    text-align: center;
+}
+
+
+#first:hover {
+    outline: 1px solid #fff;
+    border-radius: 10px;
+}
+
+#second:hover {
+    outline: 1px solid #0F658A;
+    border-radius: 10px;
+}
+
+#third:hover {
+    outline: 1px solid #97191D;
     border-radius: 10px;
 }
 

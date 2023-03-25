@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Карточки китайского
+{% endblock %}
+
+{% block link %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/cards.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+   <div class="card">
+        <div class="cardWrapper">
+            <div class="cardWrapperAll">
+                <p class="word" id="word">
+                    {{ getEnCard.word }}
+                </p>
+                <p class="description" id="description">
+                    {{ getEnCard.description }}
+                </p>
+            </div>
+        </div>
+   </div>
+</div>
+{% endblock %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Card, enCard
 from .forms import CardForm, enCardForm
-
+from django.urls import reverse
 
 def index(request):
 
@@ -37,9 +37,36 @@ def createChCard(request):
     }
     return render(request, 'main/createChCard.html', context)
 
+def updateChPage(request, pk):
+    getChCard = Card.objects.get(pk=pk)
+
+    if request.method == 'POST':
+        form = CardForm(request.POST, instance=getChCard)
+        if form.is_valid():
+            form.save()
+            return redirect('/chCards')
+
+
+    context = {
+        'getChCard': getChCard,
+        'update': True,
+        'form': CardForm(instance=getChCard),
+    }
+    return render(request, 'main/chCards.html', context)
+
+def deleteChPage(request, pk):
+    getChCard = Card.objects.get(pk=pk)
+    getChCard.delete()
+    return redirect(reverse('chCards'))
+
 def enCards(request):
     enCards = enCard.objects.all()
     return render(request, 'main/enCards.html', {'enCards': enCards})
+
+def detailEnPage(request, id):
+    getEnCard = enCard.objects.get(id=id)
+    return render(request, 'main/enDetail.html', {'getEnCard': getEnCard})
+
 
 def createEnCard(request):
     if request.method == 'POST':
@@ -54,8 +81,26 @@ def createEnCard(request):
     }
     return render(request, 'main/createEnCard.html', context)
 
-# def delete_page(request, pk):
-#
-#     return redirect('/chCards')
+def updateEnPage(request, pk):
+    getEnCard = enCard.objects.get(pk=pk)
+
+    if request.method == 'POST':
+        form = enCardForm(request.POST, instance=getEnCard)
+        if form.is_valid():
+            form.save()
+            return redirect('/enCards')
+
+
+    context = {
+        'getEnCard': getEnCard,
+        'update': True,
+        'form': enCardForm(instance=getEnCard),
+    }
+    return render(request, 'main/enCards.html', context)
+
+def deleteEnPage(request, pk):
+    getEnCard = enCard.objects.get(pk=pk)
+    getEnCard.delete()
+    return redirect(reverse('enCards'))
 
 
