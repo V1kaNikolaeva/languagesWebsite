@@ -1,11 +1,21 @@
-const toggle = document.getElementById("theme-link");
-const theme = window.localStorage.getItem("theme");
+function toogle() {
+    const toggleTheme = document.querySelector('.themetoggle');
+    const item = document.querySelector('.material-symbols-outlined');
+    let el = document.documentElement;
+    toggleTheme.addEventListener('click', () => {
+        if (el.hasAttribute('data-theme')) {
+            el.removeAttribute('data-theme');
+            item.innerText = 'light_mode'
+            localStorage.removeItem('theme');
+        } else {
+            el.setAttribute('data-theme', 'white');
+            item.innerText = 'dark_mode'
+            localStorage.setItem('theme', 'white');
+        }
+    })
+    if (localStorage.getItem('theme') !== null) {
+        el.setAttribute('data-theme', 'white');
+    }
+}
+toogle();
 
-if (theme === "dark") document.body.classList.add("dark");
-
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  if (theme === "dark") {
-    window.localStorage.setItem("theme", null);
-  } else window.localStorage.setItem("theme", "dark");
-});

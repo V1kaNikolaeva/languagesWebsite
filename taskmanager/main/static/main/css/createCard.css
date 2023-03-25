@@ -7,16 +7,16 @@
 }
 
 .form {
-    color: white;
+    color: var(--main-text);
     display: flex;
     flex-direction: column;
     width: 500px;
 }
 
 #inForm {
-    background-color: rgb(37, 43, 48);
+    background-color: var(--main-header);
     font-size: 20px;
-    caret-color: white;
+    caret-color: var(--main-text);
 }
 
 .inputWord {
@@ -24,15 +24,15 @@
     padding-left: 10px;
     outline: 1px;
     outline-style: solid;
-    outline-color: rgb(37, 43, 48);
+    outline-color: var(--main-header);
     border-radius: 10px;
     border: none;
     font-weight: 300;
-    color: #fff;
+    color: var(--main-text);
 }
 
 .inputWord:focus {
-    color: white;
+    color: var(--main-text);
 }
 
 .inputTrns {
@@ -42,12 +42,12 @@
     height: 100px;
     outline: 1px;
     outline-style: solid;
-    outline-color: rgb(37, 43, 48);
+    outline-color: var(--main-header);
     border-radius: 10px;
     resize: none;
     border: none;
     font-weight: 300;
-    color: #fff;
+    color: var(--main-text);
 }
 
 .inputTrns::placeholder {
@@ -56,7 +56,7 @@
 }
 
 .inputTrns:focus {
-    color: white;
+    color: var(--main-text);
 }
 
 .accept {
@@ -66,13 +66,13 @@
     border-radius: 10px;
     border: none;
     transition: outline .2s;
-    color: white;
-    outline-color: white;
+    color: var(--main-text);
+    outline-color: var(--main-text);
     font-family: 'Montserrat', sans-serif;
 }
 
 .accept:hover {
     outline: 1px;
     outline-style: solid;
-    outline-color: rgb(255, 255, 255);
+    outline-color: var(--main-text);
 }

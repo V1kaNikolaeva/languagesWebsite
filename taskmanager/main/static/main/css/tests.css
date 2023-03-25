@@ -6,14 +6,12 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 160px;
-    outline: 1px;
-    outline-style: solid;
-    outline-color: white;
     border-radius: 10px;
     flex-direction: column;
-    color: white;
+    color: var(--main-text);
     padding-bottom: 10px;
-    background-color: rgb(37, 43, 48) ;
+    background-color: var(--main-header);
+    background: linear-gradient(to bottom, var(--main-header), var(--main-bg));
 }
 
 .quiz-header {
@@ -46,7 +44,7 @@ span {
 }
 
 .quiz-list input[type='radio' i] {
-    color: #fff;
+    color: var(--main-text);
 }
 
 li {
@@ -63,8 +61,8 @@ li {
 }
 
 li:hover {
-    background-color: rgb(199, 141, 66);
-    transition: background-color .2s linear;
+    background: linear-gradient(to right, var(--main-nav), rgb(232, 183, 84)); #############################
+    transition: background .2s linear;
     /* box-shadow: 0 0 15px 10px rgb(199, 141, 66);
     transition: box-shadow .2s linear; */
 }
@@ -72,8 +70,8 @@ li:hover {
 .quiz-submit {
    border: 0;
    border-radius: 10px;
-   background: rgb(37, 43, 48);
-   color: #fff;
+   color: var(--main-text);
+   background: transparent;
    padding: 10px 25px;
    width: 70%;
    font-size: 15pt;
@@ -87,7 +85,7 @@ li:hover {
         /* background-color: rgb(199, 141, 66);
     transition: background-color .2s linear; */
     outline: 1px;
-    outline-color: #fff;
+    outline-color: var(--main-text);
     outline-style: solid;
     transition: outline .2s linear;
 }
