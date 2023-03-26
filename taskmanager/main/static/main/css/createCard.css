@@ -59,6 +59,42 @@
     color: var(--main-text);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--main-text);
+  -webkit-box-shadow: 0 0 0px 1000px var(--main-header) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.selectSpeech {
+    outline: none;
+    background-color: var(--main-header);
+    color: var(--main-text);
+    appearance: none;
+    height: 30px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    cursor: inherit;
+    line-height: inherit;
+    text-align: center;
+}
+
+.selectSpeech::-ms-expand {
+    display: none;
+}
+
+
 .accept {
     width: 220px;
     height: 50px;

@@ -19,6 +19,7 @@
         {% csrf_token %}
         {{ form.word }}<br>
         {{ form.description }}<br>
+        {{ form.partOfSpeech }}<br>
         <button type="submit" class="accept" id="inForm">Изменить</button>
     </form>
 </div>
@@ -53,6 +54,9 @@
                 <p class="description" id="description">
                     {{ el.description }}
                 </p>
+                <i class="partOfSpeech" id="partOfSpeech">
+                    {{ el.partOfSpeech }}
+                </i>
             </div>
             <div class="deleteWord">
                 <a class="deleteWordBtn" id="first" href="{% url 'updateEnPage' el.id %}"><p class="changeLink">Изменить</p></a>

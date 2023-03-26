@@ -6,6 +6,20 @@ from django.db import models
 class Card(models.Model):
     word = models.CharField('Слово', max_length=20)
     description = models.TextField('Перевод', max_length=70)
+    partOfSpeech = models.CharField('Перевод')
+    partOfSpeech = [
+        ('(сущ.)', 'Существительное'),
+        ('(гл.)', 'Глагол'),
+        ('(прил.)', 'Прилагательное'),
+        ('(нар.)', 'Наречие'),
+        ('(сч.сл.)', 'Счетное слово'),
+        ('(др.)', 'Другое'),
+    ]
+    partOfSpeech = models.CharField(
+        max_length=max(len(v[0]) for v in partOfSpeech),
+        choices=partOfSpeech,
+        default='(сущ.)',
+    )
 
     def __str__(self):
         return self.word
@@ -14,6 +28,18 @@ class Card(models.Model):
 class enCard(models.Model):
     word = models.CharField('Слово', max_length=20)
     description = models.TextField('Перевод', max_length=70)
+    partOfSpeech = [
+        ('(сущ.)', 'Существительное'),
+        ('(гл.)', 'Глагол'),
+        ('(прил.)', 'Прилагательное'),
+        ('(нар.)', 'Наречие'),
+        ('(др.)', 'Другое'),
+    ]
+    partOfSpeech = models.CharField(
+        max_length=max(len(v[0]) for v in partOfSpeech),
+        choices=partOfSpeech,
+        default='(сущ.)',
+    )
 
     def __str__(self):
         return self.word

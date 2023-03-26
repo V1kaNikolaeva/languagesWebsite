@@ -20,6 +20,7 @@
         {% csrf_token %}
         {{ form.word }}<br>
         {{ form.description }}<br>
+        {{ form.partOfSpeech }}<br>
         <button type="submit" class="accept" id="inForm">Изменить</button>
     </form>
 </div>
@@ -54,11 +55,16 @@
                 <p class="description" id="description">
                     {{ el.description }}
                 </p>
+                <i class="partOfSpeech" id="partOfSpeech">
+                    {{ el.partOfSpeech }}
+                </i>
             </div>
             <div class="deleteWord">
-                <a class="deleteWordBtn" id="first" href="{% url 'updateChPage' el.id %}"><p class="changeLink">Изменить</p></a>
+                <a class="deleteWordBtn" id="first" href="{% url 'updateChPage' el.id %}"><p class="changeLink">
+                    Изменить</p></a>
                 <a class="deleteWordBtn" id="second" href="/chDetail/{{el.id}}"><p class="infoLink">Подробно</p></a>
-                <a class="deleteWordBtn" id="third" href="{% url 'deleteChPage' el.id %}"><p class="deleteLink">Удалить</p></a>
+                <a class="deleteWordBtn" id="third" href="{% url 'deleteChPage' el.id %}"><p class="deleteLink">
+                    Удалить</p></a>
             </div>
         </div>
     </div>
@@ -69,9 +75,10 @@
     </div>
     {% endif %}
 
-{% endif %}
+    {% endif %}
 </div>
 <script src="{% static 'main/js/cardsShowHide.js' %}"></script>
+<script src="{% static 'main/js/partOfSpeechColors.js' %}"></script>
 {% endblock %}
 
 
