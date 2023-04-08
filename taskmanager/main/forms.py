@@ -5,7 +5,7 @@ from django.forms import ModelForm, TextInput, Textarea, Select
 class CardForm(ModelForm):
     class Meta:
         model = Card
-        fields = ["word", "description", "partOfSpeech"]
+        fields = ["word", "description", "partOfSpeech", "exposition"]
         widgets = {
             "word": TextInput(attrs={
                 'class': 'inputWord',
@@ -16,6 +16,11 @@ class CardForm(ModelForm):
                 'class': 'inputTrns',
                 'id': 'inForm',
                 'placeholder': 'Введите перевод',
+            }),
+            "exposition": Textarea(attrs={
+                'class': 'inputTrns',
+                'id': 'inForm',
+                'placeholder': 'Описание (Необязательное поле, будет доступно в разделе "Подробно")',
             }),
             "partOfSpeech": Select(attrs={
                 'class': 'selectSpeech',
@@ -28,7 +33,7 @@ class CardForm(ModelForm):
 class enCardForm(ModelForm):
     class Meta:
         model = enCard
-        fields = ["word", "description", "partOfSpeech"]
+        fields = ["word", "description", "partOfSpeech", "exposition"]
         widgets = {
             "word": TextInput(attrs={
                 'class': 'inputWord',
@@ -39,6 +44,11 @@ class enCardForm(ModelForm):
                 'class': 'inputTrns',
                 'id': 'inForm',
                 'placeholder': 'Введите перевод',
+            }),
+            "exposition": Textarea(attrs={
+                'class': 'inputTrns',
+                'id': 'inForm',
+                'placeholder': 'Описание (Необязательное поле, будет доступно в разделе "Подробно")',
             }),
             "partOfSpeech": Select(attrs={
                 'class': 'selectSpeech',

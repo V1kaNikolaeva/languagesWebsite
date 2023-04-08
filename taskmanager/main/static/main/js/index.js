@@ -12,6 +12,9 @@ chButton.onclick = showChDescription;
 
 function showChDescription(){
     description.classList.toggle('description');
+    if (description.innerText == enText) {
+        description.innerText = chText;
+    }
     if (description.innerText == '') {
         description.innerText = chText;
     } else if (description.innerText == enText) {
@@ -22,6 +25,9 @@ function showChDescription(){
 enButton.onclick = showEnDescription;
 function showEnDescription(){
     description.classList.toggle('description');
+    if (description.innerText == chText) {
+        description.innerText = enText;
+    }
     if (description.innerText == '') {
         description.innerText = enText;
     } else if (description.innerText == chText) {

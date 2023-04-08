@@ -5,8 +5,13 @@ from django.db import models
 
 class Card(models.Model):
     word = models.CharField('Слово', max_length=20)
-    description = models.TextField('Перевод', max_length=70)
-    partOfSpeech = models.CharField('Перевод')
+    description = models.TextField('Перевод', max_length=30)
+    exposition = models.TextField('Описание')
+    exposition = models.TextField(
+        max_length=100,
+        blank=True,
+    )
+    partOfSpeech = models.CharField('Часть речи')
     partOfSpeech = [
         ('(сущ.)', 'Существительное'),
         ('(гл.)', 'Глагол'),
@@ -20,14 +25,18 @@ class Card(models.Model):
         choices=partOfSpeech,
         default='(сущ.)',
     )
-
     def __str__(self):
         return self.word
 
 
 class enCard(models.Model):
     word = models.CharField('Слово', max_length=20)
-    description = models.TextField('Перевод', max_length=70)
+    description = models.TextField('Перевод', max_length=30)
+    exposition = models.TextField('Описание')
+    exposition = models.TextField(
+        max_length=100,
+        blank=True,
+    )
     partOfSpeech = [
         ('(сущ.)', 'Существительное'),
         ('(гл.)', 'Глагол'),

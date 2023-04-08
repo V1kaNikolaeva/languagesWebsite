@@ -16,7 +16,7 @@
     <style class="dark">
         html {
             font-family: 'Montserrat', sans-serif;
-            overflow-y: hidden;
+            overflow-y: visible;
             }
         :root {
             --main-bg: rgb(22, 22, 22);
@@ -24,7 +24,7 @@
             --main-header: rgb(37, 43, 48);
             --main-nav: rgb(191, 127, 8);
             --main-hover-icons: rgb(255, 255, 255);
-            --main-color: rgb(255, 255, 255);
+            --main-color: rgb(191, 127, 8);
         }
 
         :root[data-theme='white'] {
@@ -34,21 +34,21 @@
             --main-header: rgb(230, 230, 230);
         }
 
-<!--        :root[noun-color='orange'] {-->
-<!--            &#45;&#45;main-color: rgb(191, 127, 8);-->
-<!--        }-->
-<!--        :root[verb-color='green'] {-->
-<!--            &#45;&#45;main-color: rgb(1, 127, 8);-->
-<!--        }-->
-<!--        :root[adjective-color='yellow'] {-->
-<!--            &#45;&#45;main-color: rgb(191, 127, 8);-->
-<!--        }-->
-<!--        :root[adverb-color='blue'] {-->
-<!--            &#45;&#45;main-color: rgb(191, 127, 8);-->
-<!--        }-->
-<!--        :root[another-color='gray'] {-->
-<!--            &#45;&#45;main-color: rgb(191, 127, 8);-->
-<!--        }-->
+        :root[noun-color='orange'] {
+            --main-color: rgb(191, 127, 8);
+        }
+        :root[verb-color='green'] {
+            --main-color: rgb(1, 127, 8);
+        }
+        :root[adjective-color='yellow'] {
+            --main-color: rgb(191, 127, 8);
+        }
+        :root[adverb-color='blue'] {
+            --main-color: rgb(191, 127, 8);
+        }
+        :root[another-color='gray'] {
+            --main-color: rgb(191, 127, 8);
+        }
 
         body {
             background: var(--main-bg);
@@ -141,7 +141,7 @@
                 <a class="nav__link" href="/">Главная</a>
                 <a class="nav__link" href="#">Аккаунт</a>
                 <a class="nav__link" href="/pickTest">Тесты</a>
-                <a class="nav__link" href="#">Войти</a>
+                <a class="nav__link" href="/">Войти</a>
                 <a class="nav__link" href="#">Регистрация</a>
                 <button class="themetoggle">
                     <span class="material-symbols-outlined">

@@ -69,7 +69,7 @@
     margin-left: 15px;
     margin-top: 24px;
     font-size: 15px;
-    color: var(--main-nav);
+    color: var(--main-color);
 }
 
 .createNewCard {
@@ -219,5 +219,18 @@
     font-size: 18px;
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
+}
+
+.exposition {
+    color: var(--main-text);
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.expositionCard {
+    margin: auto;
+    margin-top: 35px;
+    width: 1200px;
 }
 
