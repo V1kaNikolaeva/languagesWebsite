@@ -28,6 +28,9 @@
 {% else %}
 
 <div class="wrapper">
+    <div class="sortSearchWrapper">
+        <input type="text" class="search" placeholder="Поиск">
+    </div>
     <div class="title">
         <h4 class="myWords">МОИ СПИСОК</h4>
         <div class="wordBtn">
@@ -60,9 +63,11 @@
                 </i>
             </div>
             <div class="deleteWord">
-                <a class="deleteWordBtn" id="first" href="{% url 'updateEnPage' el.id %}"><p class="changeLink">Изменить</p></a>
+                <a class="deleteWordBtn" id="first" href="{% url 'updateEnPage' el.id %}"><p class="changeLink">
+                    Изменить</p></a>
                 <a class="deleteWordBtn" id="second" href="/enDetail/{{el.id}}"><p class="infoLink">Подробно</p></a>
-                <a class="deleteWordBtn" id="third" href="{% url 'deleteEnPage' el.id %}"><p class="deleteLink">Удалить</p></a>
+                <a class="deleteWordBtn" id="third" href="{% url 'deleteEnPage' el.id %}"><p class="deleteLink">
+                    Удалить</p></a>
             </div>
         </div>
     </div>
@@ -72,9 +77,10 @@
         <p class="noCardsText">Тут пусто</p>
     </div>
     {% endif %}
-{% endif %}
+    {% endif %}
 </div>
 <script src="{% static 'main/js/cardsShowHide.js' %}"></script>
+<script src="{% static 'main/js/searchCards.js' %}"></script>
 {% endblock %}
 
 

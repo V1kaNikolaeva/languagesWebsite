@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024, initial-scale=1">
     <title>{% block title %}{% endblock %}</title>
     {% block link %}{% endblock %}
     {% load static %}
@@ -16,7 +16,6 @@
     <style class="dark">
         html {
             font-family: 'Montserrat', sans-serif;
-            overflow-y: visible;
             }
         :root {
             --main-bg: rgb(22, 22, 22);
@@ -141,7 +140,7 @@
                 <a class="nav__link" href="/">Главная</a>
                 <a class="nav__link" href="#">Аккаунт</a>
                 <a class="nav__link" href="/pickTest">Тесты</a>
-                <a class="nav__link" href="/">Войти</a>
+                <a class="nav__link" href="#">Войти</a>
                 <a class="nav__link" href="#">Регистрация</a>
                 <button class="themetoggle">
                     <span class="material-symbols-outlined">

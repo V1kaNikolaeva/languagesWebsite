@@ -53,9 +53,6 @@ function clearPage(){
 
 //Отображение вопроса
 function showQuestion(){
-    // questions[0] Обращаемся по индексу к 1 вопросу
-    //Когда в questionIndex будет записан 1, выведеться 2 вопрос...
-    //Обращаемся к массиву с вопросом
     //Генерируем вопрос с помощью шаблона
     const headerTemplate = `<h2 class="title">%title%</h2>`;
     const title = headerTemplate.replace('%title%', questions[questionIndex]['question']);

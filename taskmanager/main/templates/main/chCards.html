@@ -8,7 +8,6 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'main/css/cards.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/createCard.css' %}">
-<link rel="stylesheet" href="{% static 'main/css/cardsLight.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -29,6 +28,9 @@
 {% else %}
 
 <div class="wrapper">
+    <div class="sortSearchWrapper">
+        <input type="text" class="search" placeholder="Поиск">
+    </div>
     <div class="title">
         <h4 class="myWords">МОИ СПИСОК</h4>
         <div class="wordBtn">
@@ -79,7 +81,7 @@
     {% endif %}
 </div>
 <script src="{% static 'main/js/cardsShowHide.js' %}"></script>
-<script src="{% static 'main/js/partOfSpeechColors.js' %}"></script>
+<script src="{% static 'main/js/searchCards.js' %}"></script>
 {% endblock %}
 
 

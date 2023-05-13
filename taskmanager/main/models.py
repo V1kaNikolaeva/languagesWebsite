@@ -18,13 +18,14 @@ class Card(models.Model):
         ('(прил.)', 'Прилагательное'),
         ('(нар.)', 'Наречие'),
         ('(сч.сл.)', 'Счетное слово'),
-        ('(др.)', 'Другое'),
+        ('(друг.)', 'Другое'),
     ]
     partOfSpeech = models.CharField(
         max_length=max(len(v[0]) for v in partOfSpeech),
         choices=partOfSpeech,
         default='(сущ.)',
     )
+
     def __str__(self):
         return self.word
 
@@ -42,7 +43,7 @@ class enCard(models.Model):
         ('(гл.)', 'Глагол'),
         ('(прил.)', 'Прилагательное'),
         ('(нар.)', 'Наречие'),
-        ('(др.)', 'Другое'),
+        ('(друг.)', 'Другое'),
     ]
     partOfSpeech = models.CharField(
         max_length=max(len(v[0]) for v in partOfSpeech),
@@ -52,3 +53,19 @@ class enCard(models.Model):
 
     def __str__(self):
         return self.word
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

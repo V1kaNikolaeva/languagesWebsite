@@ -234,3 +234,29 @@
     width: 1200px;
 }
 
+.sortSearchWrapper {
+    text-align: center;
+    height: 100px;
+}
+
+.search {
+    height: 50px;
+    width: 300px;
+    padding-left: 10px;
+    outline: 1px;
+    outline-style: solid;
+    outline-color: transparent;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, var(--main-bg), var(--main-header));
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--main-text);
+}
+
+.search:focus {
+    color: var(--main-text);
+}
+
+

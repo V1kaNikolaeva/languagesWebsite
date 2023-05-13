@@ -1,5 +1,6 @@
 from .models import Card, enCard
 from django.forms import ModelForm, TextInput, Textarea, Select
+from django.contrib.auth.forms import AuthenticationForm
 
 
 class CardForm(ModelForm):
@@ -56,3 +57,6 @@ class enCardForm(ModelForm):
                 'placeholder': 'Выберите часть речи',
             }),
         }
+
+
+

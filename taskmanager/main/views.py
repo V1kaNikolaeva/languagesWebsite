@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Card, enCard
 from .forms import CardForm, enCardForm
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from django.contrib.auth.views import LoginView
 
 def index(request):
 
@@ -60,7 +61,7 @@ def deleteChPage(request, pk):
     return redirect(reverse('chCards'))
 
 def enCards(request):
-    enCards = enCard.objects.all()
+    enCards = enCard.objects.order_by('-id')
     return render(request, 'main/enCards.html', {'enCards': enCards})
 
 def detailEnPage(request, id):
@@ -102,5 +103,7 @@ def deleteEnPage(request, pk):
     getEnCard = enCard.objects.get(pk=pk)
     getEnCard.delete()
     return redirect(reverse('enCards'))
+
+
 
 
