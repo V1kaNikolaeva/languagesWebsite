@@ -130,10 +130,10 @@
 }
 
 .deleteWordBtn {
-    height: 50px;
-    width: 100px;
+    height: 40px;
+    width: 40px;
     margin: auto;
-    margin-left: 10px;
+    margin-left: 30px;
     background-color: var(--main-header);
     font-size: 15px;
     color: var(--main-text);
@@ -151,18 +151,19 @@
 
 
 #first:hover {
-    outline: 1px solid var(--main-text);
-    border-radius: 10px;
+    color: #518a0f;
 }
 
 #second:hover {
-    outline: 1px solid #0F658A;
-    border-radius: 10px;
+    color: #0F658A;
 }
 
 #third:hover {
-    outline: 1px solid #97191D;
-    border-radius: 10px;
+    color: #97191D;
+}
+
+#first, #second, #third {
+    margin-top: 9px;
 }
 
 .wordBtn{

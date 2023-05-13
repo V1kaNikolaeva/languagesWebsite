@@ -6,6 +6,9 @@
 
 {% block link %}
 {% load static %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
 <link rel="stylesheet" href="{% static 'main/css/cards.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/createCard.css' %}">
 {% endblock %}
@@ -63,11 +66,9 @@
                 </i>
             </div>
             <div class="deleteWord">
-                <a class="deleteWordBtn" id="first" href="{% url 'updateChPage' el.id %}"><p class="changeLink">
-                    Изменить</p></a>
-                <a class="deleteWordBtn" id="second" href="/chDetail/{{el.id}}"><p class="infoLink">Подробно</p></a>
-                <a class="deleteWordBtn" id="third" href="{% url 'deleteChPage' el.id %}"><p class="deleteLink">
-                    Удалить</p></a>
+                <a class="deleteWordBtn" href="{% url 'updateChPage' el.id %}"><span class="material-symbols-outlined" id="first">edit_square</span></a>
+                <a class="deleteWordBtn" href="/chDetail/{{el.id}}"><span class="material-symbols-outlined" id="second">question_mark</span></a>
+                <a class="deleteWordBtn" href="{% url 'deleteChPage' el.id %}"><span class="material-symbols-outlined" id="third">delete</span></a>
             </div>
         </div>
     </div>
