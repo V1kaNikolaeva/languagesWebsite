@@ -163,6 +163,7 @@
 }
 
 #first, #second, #third {
+    transition: color .2s linear;
     margin-top: 9px;
 }
 

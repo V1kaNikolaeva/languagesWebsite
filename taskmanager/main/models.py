@@ -8,7 +8,7 @@ class Card(models.Model):
     description = models.TextField('Перевод', max_length=30)
     exposition = models.TextField('Описание')
     exposition = models.TextField(
-        max_length=100,
+        max_length=1000,
         blank=True,
     )
     partOfSpeech = models.CharField('Часть речи')
@@ -35,7 +35,7 @@ class enCard(models.Model):
     description = models.TextField('Перевод', max_length=30)
     exposition = models.TextField('Описание')
     exposition = models.TextField(
-        max_length=100,
+        max_length=1000,
         blank=True,
     )
     partOfSpeech = [

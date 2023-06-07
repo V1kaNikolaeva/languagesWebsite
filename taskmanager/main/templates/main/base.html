@@ -7,7 +7,7 @@
     <title>{% block title %}{% endblock %}</title>
     {% block link %}{% endblock %}
     {% load static %}
-    <link rel="shortcut icon" href="{% static 'main/img/lol6.png' %}" type="image/png">
+    <link rel="shortcut icon" href="{% static 'main/img/icon.png' %}" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -120,14 +120,10 @@
         }
 
         .themetoggle:hover {
+            cursor: pointer;
             color: var(--main-nav);
         }
-
-
-
     </style>
-
-
 </head>
 
 <body>
@@ -143,7 +139,7 @@
                 <a class="nav__link" href="#">Войти</a>
                 <a class="nav__link" href="#">Регистрация</a>
                 <button class="themetoggle">
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined" id="tog">
                     light_mode
                     </span>
                 </button>
