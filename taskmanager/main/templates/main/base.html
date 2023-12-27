@@ -10,146 +10,53 @@
     <link rel="shortcut icon" href="{% static 'main/img/icon.png' %}" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
     <style class="dark">
-        html {
-            font-family: 'Montserrat', sans-serif;
-            }
-        :root {
-            --main-bg: rgb(22, 22, 22);
-            --main-text: rgb(255, 255, 255);
-            --main-header: rgb(37, 43, 48);
-            --main-nav: rgb(191, 127, 8);
-            --main-hover-icons: rgb(255, 255, 255);
-            --main-color: rgb(191, 127, 8);
-        }
-
-        :root[data-theme='white'] {
-            --main-hover-icons: rgb(230, 230, 230);
-            --main-text: black;
-            --main-bg: rgb(209, 209, 209);
-            --main-header: rgb(230, 230, 230);
-        }
-
-        :root[noun-color='orange'] {
-            --main-color: rgb(191, 127, 8);
-        }
-        :root[verb-color='green'] {
-            --main-color: rgb(1, 127, 8);
-        }
-        :root[adjective-color='yellow'] {
-            --main-color: rgb(191, 127, 8);
-        }
-        :root[adverb-color='blue'] {
-            --main-color: rgb(191, 127, 8);
-        }
-        :root[another-color='gray'] {
-            --main-color: rgb(191, 127, 8);
-        }
-
-        body {
-            background: var(--main-bg);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 15px;
-            margin: 0;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            margin: 0;
-            color: var(--main-text);
-        }
-
-        .intro {
-            width: 100%;
-            height: 100vh;
-            /* background-image: url(../images/back.jpg); */
-        }
-
-        .header {
-            background: -webkit-linear-gradient(top, var(--main-header), var(--main-bg));
-            position: absolute;
-            width: 100%;
-            height: 60px;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1400;
-            padding-top: 20px; /* Отступ сверху!!! */
-        }
-
-        .contanier {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .header__inner {
-            display: flex; /* объеденяем div'ы внутри header__inner (flex box) */
-            justify-content: space-between; /* делаем расстояние между name и nav */
-            align-items: center; /* Выравнивание текста по центру!!! */
-        }
-
-        .name {
-            font-size: 30px;
-            font-weight: 600;
-            color: var(--main-text);
-            margin-left: 30px;
-        }
-
-        .nav {
-            font-weight: 600;
-            font-size: 15px;
-            text-transform: uppercase;
-        }
-
-        .nav__link, .themetoggle {
-            display: inline-block; /* навигация становится не просто словами, а блоком */
-            margin:0 30px 7px; /* отступ, расстояние между навигацией */
-            color: var(--main-text);
-            text-decoration: none; /* убираем подчеркивание у ссылок */
-            transition: color .2s linear; /* плавная смена цвета у ссылки */
-            border: none;
-            background: transparent;
-        }
-
-
-        .nav__link:hover {
-            color: var(--main-nav);
-        }
-
-        .themetoggle:hover {
-            cursor: pointer;
-            color: var(--main-nav);
-        }
+        
     </style>
 </head>
 
 <body>
 <header class="header">
-    <div class="contanier">
-        <div class="header__inner">
-            <div class="name">Languages</div>
-
-            <nav class="nav">
+    <nav class="nav">
+        <div class="name">Languages</div>
+        <ul class="navMenu">
+            <li class="navItem">
                 <a class="nav__link" href="/">Главная</a>
-                <a class="nav__link" href="#">Аккаунт</a>
+            </li>
+            <li class="navItem">
+                <a class="nav__link" href="#">Аккаунт</a>  
+            </li>
+            <li class="navItem">
                 <a class="nav__link" href="/pickTest">Тесты</a>
+            </li>
+            <li class="navItem">
                 <a class="nav__link" href="#">Войти</a>
+            </li>
+            <li class="navItem">
                 <a class="nav__link" href="#">Регистрация</a>
+            </li>
+            <li class="navItem">
                 <button class="themetoggle">
                     <span class="material-symbols-outlined" id="tog">
                     light_mode
                     </span>
                 </button>
-            </nav>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-    </div>
-    </div>
+    </nav>
 </header>
 
 {% block content %}{% endblock %}
 <script src="{% static 'main/js/themes.js' %}"></script>
+<script src="{% static 'main/js/hamburger.js' %}"></script>
+
 </body>
 </html>

@@ -47,21 +47,17 @@ span {
     color: var(--main-text);
 }
 
-li {
+.testItem {
     width: 300px;
     height: 60px;
     border-radius: 10px;
     transition: background-color .2s linear;
     margin-top: 20px;
-    /* padding-top: 30px; */
     text-align: left;
-    /* outline: 1px;
-    outline-style: solid;
-    outline-color: rgb(199, 141, 66); */
 }
 
-li:hover {
-    background: linear-gradient(to right, var(--main-nav), rgb(232, 183, 84)); #############################
+.testItem:hover {
+    background: linear-gradient(to right, var(--main-nav), rgb(232, 183, 84)); 
     transition: background .2s linear;
     /* box-shadow: 0 0 15px 10px rgb(199, 141, 66);
     transition: box-shadow .2s linear; */

@@ -47,7 +47,6 @@ def updateChPage(request, pk):
             form.save()
             return redirect('/chCards')
 
-
     context = {
         'getChCard': getChCard,
         'update': True,

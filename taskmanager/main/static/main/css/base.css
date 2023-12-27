@@ -1,0 +1,155 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--main-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-header);
+}
+
+:root {
+    --main-bg: rgb(22, 22, 22);
+    --main-text: rgb(255, 255, 255);
+    --main-header: rgb(37, 43, 48);
+    --main-nav: rgb(191, 127, 8);
+    --main-hover-icons: rgb(255, 255, 255);
+    --main-color: rgb(191, 127, 8);
+}
+
+:root[data-theme='white'] {
+    --main-hover-icons: rgb(230, 230, 230);
+    --main-text: black;
+    --main-bg: rgb(209, 209, 209);
+    --main-header: rgb(230, 230, 230);
+}
+
+body {
+    background: var(--main-bg);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+
+}
+
+h1, h2, h3, h4, h5, h6, p, strong {
+    font-size: 20px;
+    margin: 0;
+    color: var(--main-text);
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+    background: -webkit-linear-gradient(top, var(--main-header), var(--main-bg));
+    height: 80px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.navMenu {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding-top: 2px;
+    padding-left: 0;
+    list-style: none;
+    font-size: 20px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: var(--main-color);
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--main-text);
+    margin-left: 30px;
+}
+
+
+.nav__link, .themetoggle {
+    display: inline-block; /* навигация становится не просто словами, а блоком */
+    margin:0 30px; /* отступ, расстояние между навигацией */
+    color: var(--main-text);
+    text-decoration: none; /* убираем подчеркивание у ссылок */
+    transition: color .2s linear; /* плавная смена цвета у ссылки */
+    border: none;
+    background: transparent;
+}
+
+.nav__link:hover {
+    color: var(--main-nav);
+}
+
+.themetoggle:hover {
+    cursor: pointer;
+    color: var(--main-nav);
+}
+
+@media(max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .navMenu {
+        display: flex;
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: var(--main-bg);
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+    }
+
+    .navItem {
+        margin: 16px 0;
+    }
+
+    .navMenu.active {
+        left: 0;
+    }
+}

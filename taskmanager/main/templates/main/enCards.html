@@ -31,7 +31,7 @@
 {% else %}
 
 <div class="wrapper">
-    <div class="sortSearchWrapper">
+    <div class="searchWrapper">
         <input type="text" class="search" placeholder="Поиск">
     </div>
     <div class="title">
@@ -54,10 +54,10 @@
     {% for el in enCards %}
     <div class="card">
         <div class="cardWrapper">
-            <div class="cardWrapperAll">
-                <p class="word" id="word">
+            <div class="info__contanier">
+                <strong class="word" id="word">
                     {{ el.word }}
-                </p>
+                </strong>
                 <p class="description" id="description">
                     {{ el.description }}
                 </p>
@@ -65,10 +65,10 @@
                     {{ el.partOfSpeech }}
                 </i>
             </div>
-            <div class="deleteWord">
-                <a class="deleteWordBtn" href="{% url 'updateEnPage' el.id %}"><span class="material-symbols-outlined" id="first">edit_square</span></a>
-                <a class="deleteWordBtn" href="/enDetail/{{el.id}}"><span class="material-symbols-outlined" id="second">question_mark</span></a>
-                <a class="deleteWordBtn" href="{% url 'deleteEnPage' el.id %}"><span class="material-symbols-outlined" id="third">delete</span></a>
+            <div class="actionsButtons">
+                <a class="changeButton" href="{% url 'updateEnPage' el.id %}"><span class="material-symbols-outlined" id="first">edit_square</span></a>
+                <a class="infoButton" href="/enDetail/{{el.id}}"><span class="material-symbols-outlined" id="second">question_mark</span></a>
+                <a class="deleteButton" href="{% url 'deleteEnPage' el.id %}"><span class="material-symbols-outlined" id="third">delete</span></a>
             </div>
         </div>
     </div>
