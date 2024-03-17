@@ -35,19 +35,21 @@
         <input type="text" class="search" placeholder="Поиск">
     </div>
     <div class="title">
-        <h4 class="myWords">МОИ СПИСОК</h4>
-        <div class="wordBtn">
+        <div class="myWords">
+            <h4>МОЙ СПИСОК</h4>
+        </div>
+        <div class="hideWords">
             <button class="wordBtnFirst" id="wordBtnFirst">
-                <h4 class="hideWord">Скрыть слова</h4>
+                Скрыть слова
             </button>
         </div>
-        <div class="descriptionBtn">
+        <div class="hideTranslates">
             <button class="descriptionBtnSecond" id="descriptionBtnSecond">
-                <h4 class="hideDescription">Скрыть перевод</h4>
+                Скрыть перевод
             </button>
         </div>
         <div class="createNewCard">
-            <a class="createNewCardLink" href="/createEnCard"><h4 class="textCreate">Добавить слово (en)</h4></a>
+            <a class="createNewCardLink" href="/createEnCard"><p class="textCreate">Добавить слово (en)</p></a>
         </div>
     </div>
     {% if enCards %}
@@ -76,6 +78,7 @@
     {% else %}
     <div class="noCards">
         <p class="noCardsText">Тут пусто</p>
+        <p class="noCardsText">Добавьте слова!</p>
     </div>
     {% endif %}
     {% endif %}

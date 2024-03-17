@@ -1,6 +1,5 @@
 .wrapper {
     margin: auto;
-    height: 100vh;
     width: 100%;
     margin-top: 100px;
 }
@@ -16,28 +15,36 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 70%;
 }
 
 .title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
     max-width: 1200px;
-    margin-bottom: 30px;
     border-radius: 10px;
     color: var(--main-text);
     padding: 10px;
 }
 
+.hideWords, .hideTranslates, .createNewCard {
+    min-width: 210px;
+    height: 50px;
+    margin: 10px;
+}
+
 .card {
-    margin: auto;
+    padding: 20px;
+    margin: 0 auto;
     margin-bottom: 10px;
     border-radius: 10px;
     max-width: 1200px;
     color: var(--main-text);
-    height: 80px;
+    height: 60px;
     background-color: var(--main-header);
     background: linear-gradient(to right, var(--main-bg), var(--main-header));
 }
@@ -72,10 +79,6 @@
     font-size: 18px;
 }
 
-.myWords {
-    margin-top: 15px;
-}
-
 .createNewCardLink:hover {
     outline: 1px;
     outline-style: solid;
@@ -84,21 +87,16 @@
 }
 
 .noCards {
-    display: block;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     color: var(--main-text);
-    text-align: center;
-    background-color: var(--main-header);
-    border-radius: 10px;
-    width: 1200px;
+    max-width: 1200px;
     height: 80px;
     font-size: 20px;
     font-weight: 300;
-    background: linear-gradient(to right, var(--main-bg), var(--main-header));
-}
-
-.noCardsText {
-    padding-top: 25px;
 }
 
 .actionsButtons {
@@ -111,9 +109,7 @@
 .changeButton, 
 .infoButton, 
 .deleteButton {
-    height: 40px;
-    width: 60px;
-    margin-top: 10px;
+    margin: 5px;
     background-color: var(--main-header);
     color: var(--main-text);
     cursor: pointer;
@@ -136,67 +132,37 @@
     transition: color .2s linear;
 }
 
-.wordBtnFirst {
+.wordBtnFirst, .descriptionBtnSecond, .createNewCardLink {
     border: none;
     color: var(--main-text);
     background-color: var(--main-bg);
     cursor: pointer;
-    width: 220px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 100;
+    padding: 0px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.wordBtnFirst:hover {
+.wordBtnFirst:hover, .descriptionBtnSecond:hover {
     outline: 1px;
     outline-style: solid;
     outline-color: var(--main-nav);
     border-radius: 10px;
-}
-
-.hideWord {
-    font-size: 18px;
-    font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.descriptionBtnSecond {
-    border: none;
-    color: var(--main-text);
-    background-color: var(--main-bg);
-    cursor: pointer;
-    width: 220px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.descriptionBtnSecond:hover {
-    outline: 1px;
-    outline-style: solid;
-    outline-color: var(--main-nav);
-    border-radius: 10px;
-}
-
-.hideDescription {
-    font-size: 18px;
-    font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .exposition {
     color: var(--main-text);
-    margin-top: 15px;
     font-size: 18px;
     font-weight: 300;
 }
 
 .expositionCard {
-    margin: auto;
-    margin-top: 35px;
-    width: 1200px;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: start;
 }
 
 .searchWrapper {
@@ -225,6 +191,42 @@
     color: var(--main-text);
 }
 
+@media(max-width: 768px) {
+    .title {
+        flex-direction: column;
+        justify-content: center;
+    }
 
+    h1, h2, h3, h4, h5, h6, p, strong {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 10px;
+        margin: 20px;
+        height: 80px;
+    }
+
+    .wordBtnFirst, .descriptionBtnSecond, .createNewCard {
+        outline: 1px;
+        outline-style: solid;
+        outline-color: var(--main-nav);
+        border-radius: 10px;
+    }
+
+    .createNewCard {
+        outline-color: #64C650;
+    }
+
+    .info__contanier {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .expositionCard {
+        margin: 20px;
+    }
+}
 
 

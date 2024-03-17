@@ -1,10 +1,9 @@
-
 .pick {
-    margin-top: 200px;
+    padding-top: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; /* делаем флекс как бы по вертикали */
+    flex-direction: column;
     text-align: center;
 }
 
@@ -12,7 +11,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
 }
 
 .language {
@@ -25,33 +23,17 @@
     padding-top: 90px;
 }
 
-.first {
+.first, .second {
     height: 200px;
     border-radius: 10px;
-    margin: 0 50px;
+    margin: 50px;
     width: 200px;
-    margin-left: 0px;
     background-color: var(--main-header);
     transition: .7s;
     background: linear-gradient(to top, var(--main-bg), var(--main-header));
 }
 
-.first:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 30px var(--main-text);
-    transition: box-shadow .9s linear;
-}
-
-.second {
-    height: 200px;
-    width: 200px;
-    border-radius: 10px;
-    background-color: var(--main-header);
-    transition: .7s;
-    background: linear-gradient(to top, var(--main-bg), var(--main-header));
-}
-
-.second:hover {
+.second:hover, .first:hover {
     transform: scale(1.08);
     box-shadow: 0 0 30px var(--main-text);
     transition: box-shadow .9s linear;
