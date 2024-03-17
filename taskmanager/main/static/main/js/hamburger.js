@@ -6,35 +6,30 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active')
 })
 
-function removeActive() {
-    hamburger.classList.remove('active')
-    navMenu.classList.remove('active')
+function closeNavigation(e) {
+    const withinBoundaries = e.composedPath().includes(hamburger) || e.composedPath().includes(navMenu);
+	if (!withinBoundaries) {
+        hamburger.classList.remove('active')
+        navMenu.classList.remove('active')
+	}
 }
 
 document.querySelectorAll('nav__link').forEach(item => item.
     addEventListener('click', () => {
-        removeActive()
+        hamburger.classList.remove('active')
+        navMenu.classList.remove('active')
 }))
 
 document.addEventListener('pointerdown', (e) => {
-    const withinBoundaries = e.composedPath().includes(hamburger) || e.composedPath().includes(navMenu);
-	if (!withinBoundaries) {
-        removeActive()
-	}
+    closeNavigation(e)
 })
 
 document.addEventListener('mousedown', (e) => {
-    const withinBoundaries = e.composedPath().includes(hamburger) || e.composedPath().includes(navMenu);
-	if (!withinBoundaries) {
-        removeActive()
-	}
+    closeNavigation(e)
 })
 
 document.addEventListener('scroll', (e) => {
-    const withinBoundaries = e.composedPath().includes(hamburger) || e.composedPath().includes(navMenu);
-	if (!withinBoundaries) {
-        removeActive()
-	}
+    closeNavigation(e)
 })
 
 //Главная будет разделом учиться, где будут представлены А1 и ХСК1, со словами и пояснениями как ими пользоваться

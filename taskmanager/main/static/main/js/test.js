@@ -1,56 +1,13 @@
-//Массив с вопросом, вариантами ответов, и правильным вариантом, 1 вопрос = 0, 1 ответ = 1
-const questions = [
-    {
-        question: "Have you ever been ... Russia?",
-        answers: ["in", "to", "on", "at"],
-        correct: 2,
-    },
-    {
-        question: "I was ...",
-        answers: ["shocked", "shock", "shocking", "on shocked"],
-        correct: 1,
-    },
-    {
-        question: "椅子上...小猫",
-        answers: ["有", "在", "了", "吧"],
-        correct: 1,
-    },
-    {
-        question: "去书店...走？",
-        answers: ["怎么", "怎么样", "什么", "哪儿"],
-        correct: 1,
-    },
-    {
-        question: "他有三...多自行车",
-        answers: ["个", "本", "只", "辆"],
-        correct: 4,
-    },
-    {
-        question: "他奶奶的房间是粉色...",
-        answers: ["过", "了", "吗", "的"],
-        correct: 4,
-    },
-    {
-        question: "你最喜欢...个菜？",
-        answers: ["怎么", "怎么样", "什么", "哪"],
-        correct: 4,
-    },
-    {
-        question: "那...手表三千多块钱",
-        answers: ["块", "本", "只", "辆"],
-        correct: 1,
-    },
-    {
-        question: "你睡了十几...小时觉",
-        answers: ["本", "只", "个", "辆"],
-        correct: 3,
-    },
-    {
-        question: "楼...一般都有空调",
-        answers: ["了", "里", "外", "上"],
-        correct: 2,
-    },
-];
+import { chQuestions } from './chTestQuestions.js'
+import { enQuestions } from './enTestQuestions.js'
+
+
+let currentTest;
+if (Object.keys(sessionStorage).length === 1) {
+    currentTest = Object.keys(sessionStorage).join('');
+}
+
+const questions = currentTest === 'chTest' ? chQuestions : enQuestions;
 
 //Создаем константы с текстами, чтобы в дальнейшем оперировать ими
 const headerContainer = document.querySelector('#header');
@@ -81,7 +38,7 @@ function showQuestion(){
 
     //Выводим элементы массива поочереди, варианты ответов
     let answerNumber = 1; //
-    for (answerText of questions[questionIndex]['answers']){
+    for (let answerText of questions[questionIndex]['answers']){
 
         const questionTemplate =
         `<li>
